@@ -17,8 +17,8 @@ public class SpringSenderApp {
                 new AnnotationConfigApplicationContext(SpringSenderApp.class);
 
         SpringSenderService service = context.getBean(SpringSenderService.class);
-//        service.sendMessage("hello mq world");
-//        service.sendObject(new DummyObject("Dummy Object", 14));
+        service.sendMessage("hello mq world");
+        service.sendObject(new DummyObject("Dummy Object", 14));
         context.close();
     }
 
