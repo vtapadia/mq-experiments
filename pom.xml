@@ -12,6 +12,7 @@
     <modules>
         <module>mqSenderSpring</module>
         <module>mqCommon</module>
+        <module>mqReceiverSpring</module>
     </modules>
 
     <properties>

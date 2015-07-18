@@ -14,17 +14,17 @@ public class SpringSenderService {
 
     public void sendMessage(String message) {
         //One to one communication
-        jmsTemplate.convertAndSend(Destinations.DUMMY_QUEUE_STR, message);
+        jmsTemplate.convertAndSend(Destinations.ACTIVE_QUEUE_STR, message);
 
         //Broadcasting a message
-        jmsTemplate.convertAndSend(Destinations.DUMMY_TOPIC_STR, message);
+        jmsTemplate.convertAndSend(Destinations.ACTIVE_TOPIC_STR, message);
     }
 
     public void sendObject(DummyObject dummyObject) {
 
-        jmsTemplate.convertAndSend(Destinations.DUMMY_QUEUE_OBJ, dummyObject);
+        jmsTemplate.convertAndSend(Destinations.ACTIVE_QUEUE_OBJ, dummyObject);
 
-        jmsTemplate.convertAndSend(Destinations.DUMMY_TOPIC_OBJ, dummyObject);
+        jmsTemplate.convertAndSend(Destinations.ACTIVE_TOPIC_OBJ, dummyObject);
     }
 
 
